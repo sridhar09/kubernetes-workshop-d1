@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: getting-started
+  labels:
+    app_name: getting-started
+    purpose: learning
+spec:
+  containers:
+    - name: getting-started
+      image: docker/getting-started
