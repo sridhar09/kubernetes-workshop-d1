@@ -5,7 +5,7 @@ In this exercise, we are going to use the `docker/getting-started` image. But fe
 Now let's create our pod:
 
 ```
-kubectl apply -f pod.yaml
+kubectl apply -f simple-pod.yaml
 ```
 
 And now let's see if it's running:

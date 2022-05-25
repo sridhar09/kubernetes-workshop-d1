@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: getting-started
+  labels:
+    app_name: getting-started
+    purpose: learning
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app_name: getting-started
+      purpose: learning
+  template:
+    metadata:
+      name: getting-started
+      labels:
+        app_name: getting-started
+        purpose: learning
+    spec:
+      containers:
+        - name: getting-started
+          image: docker/getting-started

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sidecar-sample
+  labels:
+    app_name: getting-started
+    purpose: learning
+spec:
+  containers:
+    - name: getting-started
+      image: docker/getting-started
+    - name : sidecar-container
+      image: nginx
+      ports:
+        - containerPort: 8080
