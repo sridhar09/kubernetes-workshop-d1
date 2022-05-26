@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getting-started
+  labels:
+    app_name: getting-started
+    purpose: learning
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app_name: getting-started
+      purpose: learning
+  template:
+    metadata:
+      name: getting-started
+      labels:
+        app_name: getting-started
+        purpose: learning
+    spec:
+      containers:
+        - name: getting-started
+          image: docker/getting-started
+          volumeMounts:
+            - name: test
+              mountPath: /pv01
+      volumes:
+        - name: test
+          persistentVolumeClaim:
+            claimName: pvc-selector-example
