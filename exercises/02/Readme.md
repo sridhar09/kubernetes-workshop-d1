@@ -5,7 +5,7 @@
 Find file named sidecar-pod.yaml in the same folder and run the pod:
 
 ```bash
-kubectl apply -f sidecar.yaml
+kubectl apply -f sidecar-pod.yaml
 ```
 
 #### Once the pod is running, connect to the sidecar pod
