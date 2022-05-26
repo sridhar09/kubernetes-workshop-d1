@@ -9,7 +9,7 @@ spec:
   containers:
     - name: getting-started
       image: docker/getting-started
-    - name : sidecar-container
-      image: nginx
-      ports:
-        - containerPort: 8080
+    - name: sidecar-container
+      image: alpine # alpine is a simple Linux OS image
+      command: ["/bin/sh"]
+      args: ["-c", "while true; do date >> /var/log/app.txt; sleep 5;done"]

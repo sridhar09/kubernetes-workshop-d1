@@ -17,7 +17,8 @@ kubectl exec sidecar-sample -c sidecar-container -it -- bash
 #### Install curl on the sidecar
 
 ```bash
-apt-get update && apt-get install curl
+apk update
+apk add curl
 ```
 
 #### Use curl to access the log file via the sidecar
